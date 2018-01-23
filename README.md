@@ -37,7 +37,8 @@ SELECT author, title, count(slug) AS VIEWS
 FROM articles, log
 WHERE log.path like ('%', articles.slug)
 GROUP BY articles.title, articles.author
-ORDER BY views DESC;```<br>
+ORDER BY views DESC;```
+<br>
 
 #### Question: Who are the most popular article authors of all time? -- author_popularity
 ```CREATE VIEW author_popularity AS
@@ -45,7 +46,8 @@ SELECT name, sum(view_articles.views) AS total_popularity
 FROM authors, view_articles
 WHERE view_articles.author = authors.id
 GROUP BY authors.name
-ORDER BY total_popularity DESC;```<br>
+ORDER BY total_popularity DESC;```
+<br>
 
 #### Question: On which day did more than 1% of requests lead to errors?
 ```CREATE VIEW error_days AS
