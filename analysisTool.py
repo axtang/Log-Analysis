@@ -1,6 +1,5 @@
 import psycopg2
 import time
-import datetime
 import sys
 
 
@@ -79,8 +78,8 @@ def connect():
 query1="select * from view_articles limit 3"
 
 def popular3Articles():
-    db = connect()
-    c = db.cursor()
+    db=connect()
+    c=db.cursor()
     c.execute(query1)
     c.fetchall()
     db.close()
@@ -93,8 +92,8 @@ def popular3Articles():
 query2="select * from author_popularity"
 
 def popularAuthors():
-    db = connect()
-    c = db.cursor()
+    db=connect()
+    c=db.cursor()
     c.execute(query2)
     c.fetchall()
     db.close()
@@ -105,13 +104,13 @@ def popularAuthors():
 query3="select * from error_rates limit 1"
 
 def errorDays():
-    db = connect()
-    c = db.cursor()
+    db=connect()
+    c=db.cursor()
     c.execute(query3) 
     c.fetchall()
     db.close()
 
-if __name__ == "__main__":
+if __name__=="__main__":
     print('These 3 articles have been accessed the most:')
     popular3Articles()
 
