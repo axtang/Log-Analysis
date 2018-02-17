@@ -6,9 +6,9 @@ import sys
 def connect():
     return psycopg2.connect("dbname=news")
 
-query1="select title, views from view_articles limit 3"
-query2="select name, total_popularity from author_popularity"
-query3="select to_char(date, 'YYY-MON-DD') as date, error_rate from error_days where error_rate > 1.0"
+query1 = "select title, views from view_articles limit 3"
+query2 = "select name, total_popularity from author_popularity"
+query3 = "select to_char(date, 'YYY-MON-DD') as date, error_rate from error_days where error_rate > 1.0"
 
 # 1. What are the most popular three articles of all time?
 # Present this information as a sorted list with the most popular article at the top
