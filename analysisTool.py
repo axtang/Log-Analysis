@@ -123,7 +123,7 @@ query3 = "select * from error_rates limit 1"
 def errorDays():
     db = connect()
     c = db.cursor()
-    c.execute(query3) 
+    c.execute(query3)
     c.fetchall()
     db.close()
 
