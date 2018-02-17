@@ -67,16 +67,13 @@ def errorDays(query3):
 if __name__ == "__main__":
     with open('LAOutput.txt', 'w') as f:
         sys.stdout = f
-        print('These 3 articles have been accessed the most:',
-                file=f)
+        print('These 3 articles have been accessed the most:', file=f)
         popular3Articles(query1)
 
-        print('From the most popular to the least popular authors:',
-                file=f)
+        print('From the most popular to the least popular authors:', file=f)
         popularAuthors(query2)
 
-        print('On this date more than 1% of requests lead to errors:',
-                file=f)
+        print('On this date more than 1% of requests lead to errors:', file=f)
         errorDays(query3)
 
 
@@ -129,6 +126,7 @@ def errorDays():
     c.execute(query3) 
     c.fetchall()
     db.close()
+
 
 if __name__ == "__main__":
     print('These 3 articles have been accessed the most:')
