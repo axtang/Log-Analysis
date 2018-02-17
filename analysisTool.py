@@ -28,7 +28,7 @@ def popular3Articles(query1):
         views = output[i][1]
         print ("%s, %d" % (title, views))
     db.close()
-    
+
 
 # 2. Who are the most popular article authors of all time?
 # Sum up all of the articles each author has written, which
@@ -55,7 +55,7 @@ def popularAuthors(query2):
 def errorDays(query3):
     db = connect()
     c = db.cursor()
-    c.execute(query3) 
+    c.execute(query3)
     output = c.fetchall()
     for i in range(len(output)):
         date = output[i][0]
@@ -68,19 +68,16 @@ if __name__ == "__main__":
     with open('LAOutput.txt', 'w') as f:
         sys.stdout = f
         print('These 3 articles have been accessed the most:',
-            file=f)
+                file=f)
         popular3Articles(query1)
 
         print('From the most popular to the least popular authors:',
-            file=f)
+                file=f)
         popularAuthors(query2)
 
         print('On this date more than 1% of requests lead to errors:',
-            file=f)
+                file=f)
         errorDays(query3)
-
-import psycopg2
-import datetime
 
 
 def connect():
@@ -93,6 +90,7 @@ def connect():
 
 
 query1 = "select * from view_articles limit 3"
+
 
 def popular3Articles():
     db = connect()
@@ -110,6 +108,7 @@ def popular3Articles():
 
 query2 = "select * from author_popularity"
 
+
 def popularAuthors():
     db = connect()
     c = db.cursor()
@@ -122,6 +121,7 @@ def popularAuthors():
 
 
 query3 = "select * from error_rates limit 1"
+
 
 def errorDays():
     db = connect()
