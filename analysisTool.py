@@ -17,6 +17,7 @@ error_rate from error_days where error_rate > 1.0"
 # Listing "author" because it will be helpful for the second
 # question.
 
+
 def popular3Articles(query1):
     db = connect()
     c = db.cursor()
@@ -35,6 +36,7 @@ def popular3Articles(query1):
 # Present this as a sorted list with the most popular author
 # at the top
 
+
 def popularAuthors(query2):
     db = connect()
     c = db.cursor()
@@ -48,6 +50,7 @@ def popularAuthors(query2):
 
 
 # 3. On which day did more than 1% of requests lead to errors?
+
 
 def errorDays(query3):
     db = connect()
@@ -88,6 +91,7 @@ def connect():
 # article at the top
 # Listing "author" because it will be helpful for the second question.
 
+
 query1 = "select * from view_articles limit 3"
 
 def popular3Articles():
@@ -96,12 +100,13 @@ def popular3Articles():
     c.execute(query1)
     c.fetchall()
     db.close()
-    
+
 
 # 2. Who are the most popular article authors of all time?
 # Sum up all of the articles each author has written, which authors get
 # the most page views?
 # Present this as a sorted list with the most popular author at the top
+
 
 query2 = "select * from author_popularity"
 
@@ -114,6 +119,7 @@ def popularAuthors():
 
 
 # 3. On which day did more than 1% of requests lead to errors?
+
 
 query3 = "select * from error_rates limit 1"
 
