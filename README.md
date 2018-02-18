@@ -36,7 +36,7 @@ Copy, paste, and run the following views onto the command line once logged into 
 ```CREATE VIEW view_articles AS
 SELECT author, title, count(slug) AS VIEWS
 FROM articles, log
-WHERE log.path like ('%', articles.slug)
+WHERE log.path like concat('%', articles.slug)
 GROUP BY articles.title, articles.author
 ORDER BY views DESC;
 ```
@@ -59,3 +59,11 @@ FROM log
 GROUP BY date(time)
 ORDER BY error_rate DESC;
 ```
+
+## Author
+
+* **Annabelle Tang** - *Initial work* - [axtang](https://github.com/axtang)
+
+## Acknowledgments
+
+*
