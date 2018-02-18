@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import psycopg2
 import time
 import sys
