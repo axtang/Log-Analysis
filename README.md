@@ -1,19 +1,19 @@
-# Log Analysis - Tool building
+# Log Analysis Tool
 
-This is a Udacity project.
-
-This project is intend to build a SQL reporting tool that summarizes articles, authors, and log data from a large news database.
+This is a SQL reporting tool that summarizes articles, authors, and log data from a large news database.
 
 
-## Preparations
+## Getting Started
 
-(Preferrably you want to run run this tool in a virtual environment inside of your local machine. The list below shows you, first, how to install a virtual machine into your local machine, and secondly, how to install the tool inside this virtual machine.)
+Preferrably you want to run run this tool in a virtual environment inside of your local machine. The list below shows you, first, how to install a virtual machine into your local machine, and secondly, how to install the tool inside this virtual machine.
+
+### Prerequisites
 
 1. Download and install the VirtualBox package (https://www.virtualbox.org/wiki/Download_Old_Builds_5_1).
 2. Download and install Vagrant (https://www.vagrantup.com/downloads.html). 
 3.Download/clone the database data from Udacity's GitHub account (https://github.com/udacity/fullstack-nanodegree-vm) into your Vagrant file. Don't forget to unzip the file after download is completed.
 
-## How to run this tool<br>
+## Installing<br>
 
 1. To bring the virtual machine online, on your terminal, go to the file location where Vagrant was installed at and type in **vagrant up** then log into it with **vagrant ssh**. To check the version, run **vagrant --version**.
 2. Then, **cd /vagrant**.
