@@ -1,3 +1,5 @@
+"""This is a log analysis tool written for Udacity FSND."""
+
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 import psycopg2
@@ -22,7 +24,7 @@ error_rate from error_days where error_rate > 1.0"
 
 
 def popular3Articles(query1):
-    """Executes query1."""
+    """Executing query1."""
     db = connect()
     c = db.cursor()
     c.execute(query1)
@@ -42,7 +44,7 @@ def popular3Articles(query1):
 
 
 def popularAuthors(query2):
-    """This funciton executes query2."""
+    """Executing query2."""
     db = connect()
     c = db.cursor()
     c.execute(query2)
@@ -58,7 +60,7 @@ def popularAuthors(query2):
 
 
 def errorDays(query3):
-    """This funciton executes query3."""
+    """Executing query3."""
     db = connect()
     c = db.cursor()
     c.execute(query3)
