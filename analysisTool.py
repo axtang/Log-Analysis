@@ -1,7 +1,8 @@
 """This is a log analysis tool written for Udacity FSND."""
 
-#!/usr/bin/python3
-# -*- coding: utf-8 -*-
+# !/usr/bin/python3
+
+
 import psycopg2
 import time
 import sys
@@ -10,6 +11,7 @@ import sys
 def connect():
     """Connecting this tool to the database called 'news'."""
     return psycopg2.connect("dbname=news")
+
 
 query1 = "select title, views from view_articles limit 3"
 query2 = "select name, total_popularity from author_popularity"
@@ -32,7 +34,7 @@ def popular3Articles(query1):
     for i in range(len(output)):
         title = output[i][0]
         views = output[i][1]
-        print ("%s, %d" % (title, views))
+        print("%s, %d" % (title, views))
     db.close()
 
 
@@ -82,6 +84,6 @@ if __name__ == "__main__":
         print('From the most popular to the least popular authors:', file=f)
         popularAuthors(query2)
         print('')
-        
+
         print('On this date more than 1% of requests lead to errors:', file=f)
         errorDays(query3)
