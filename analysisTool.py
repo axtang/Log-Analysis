@@ -77,9 +77,11 @@ if __name__ == "__main__":
         sys.stdout = f
         print('These 3 articles have been accessed the most:', file=f)
         popular3Articles(query1)
+        print('')
 
         print('From the most popular to the least popular authors:', file=f)
         popularAuthors(query2)
-
+        print('')
+        
         print('On this date more than 1% of requests lead to errors:', file=f)
         errorDays(query3)
