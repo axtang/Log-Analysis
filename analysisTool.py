@@ -22,8 +22,7 @@ error_rate from error_days where error_rate > 1.0"
 
 
 def popular3Articles(query1):
-    """This function executes query1 and prints out the title
-    and number of views of the result."""
+    """Executes query1."""
     db = connect()
     c = db.cursor()
     c.execute(query1)
@@ -43,8 +42,7 @@ def popular3Articles(query1):
 
 
 def popularAuthors(query2):
-    """This funciton executes query2 and prints out the name
-    and quantified popularity of the result."""
+    """This funciton executes query2."""
     db = connect()
     c = db.cursor()
     c.execute(query2)
@@ -60,8 +58,7 @@ def popularAuthors(query2):
 
 
 def errorDays(query3):
-    """This funciton executes query3 and prints out the date that
-    has the highest error_rate."""
+    """This funciton executes query3."""
     db = connect()
     c = db.cursor()
     c.execute(query3)
