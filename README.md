@@ -33,7 +33,7 @@ In SQL, a view is a virtual table based on the result_set of an SQL statement.
 Copy, paste, and run the following views onto the command line once logged into the news database.
 
 #### Question: What are the most popular 3 articles of all time? -- view_articles
-```CREATE VIEW view_articles AS
+```CREATE OR REPLACE VIEW view_articles AS
 SELECT author, title, count(slug) AS VIEWS
 FROM articles, log
 WHERE log.path like concat('%', articles.slug)
@@ -43,7 +43,7 @@ ORDER BY views DESC;
 <br>
 
 #### Question: Who are the most popular article authors of all time? -- author_popularity
-```CREATE VIEW author_popularity AS
+```CREATE OR REPLACE VIEW author_popularity AS
 SELECT name, sum(view_articles.views) AS total_popularity
 FROM authors, view_articles
 WHERE view_articles.author = authors.id
@@ -53,7 +53,7 @@ ORDER BY total_popularity DESC;
 <br>
 
 #### Question: On which day did more than 1% of requests lead to errors?
-```CREATE VIEW error_days AS
+```CREATE OR REPLACE VIEW error_days AS
 SELECT date(time), concat(round(100*(case log.status WHEN '200 OK' then 0 else 1 end)/count(*), 2), " %") as error_rate
 FROM log
 GROUP BY date(time)
