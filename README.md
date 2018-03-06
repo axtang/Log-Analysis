@@ -54,9 +54,10 @@ ORDER BY total_popularity DESC;
 
 #### Question: On which day did more than 1% of requests lead to errors?
 ```CREATE OR REPLACE VIEW error_days AS
-SELECT date(time), concat(round(100*(case log.status WHEN '200 OK' then 0 else 1 end)/count(*), 2), " %") as error_rate
+SELECT date(time), round(100*(case log.status WHEN '200 OK' then 0 else 1 end)/count(*), 2) as error_rate
 FROM log
 GROUP BY date(time)
+WHERE error_rate >1.0
 ORDER BY error_rate DESC;
 ```
 
