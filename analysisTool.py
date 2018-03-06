@@ -1,6 +1,6 @@
-"""This is a log analysis tool written for Udacity FSND."""
-
 # !/usr/bin/python3
+
+"""This is a log analysis tool written for Udacity FSND."""
 
 
 import psycopg2
