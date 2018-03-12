@@ -11,7 +11,7 @@ Preferrably you want to run run this tool in a virtual environment inside of you
 
 1. Download and install the VirtualBox package (https://www.virtualbox.org/wiki/Download_Old_Builds_5_1).
 2. Download and install Vagrant (https://www.vagrantup.com/downloads.html). 
-3.Download/clone the database data from Udacity's GitHub account (https://github.com/udacity/fullstack-nanodegree-vm) into your Vagrant file. Don't forget to unzip the file after download is completed.
+3.Download/clone the database data from Udacity's GitHub account (https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip) into your Vagrant file. Don't forget to unzip the file after download is completed.
 
 ## Installing<br>
 
