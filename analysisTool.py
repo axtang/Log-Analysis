@@ -85,5 +85,6 @@ if __name__ == "__main__":
         popularAuthors(query2)
         print('\n')
 
-        print('On this date more than 1% of requests lead to errors: \n', file=f)
+        print('On this date more than 1% of requests lead to errors: \n',
+              file=f)
         errorDays(query3)
